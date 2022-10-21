@@ -1,0 +1,246 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>⊗mkSpEfAnm</title>
+    <style>
+        #q1 {
+            animation-name: q1;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+        }
+
+        @keyframes q1 {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: 500px;
+            }
+        }
+
+        #q2 {
+            animation-name: q2;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+
+            height: 200px;
+            width: 200px;
+            border: 1px solid red;
+        }
+
+        @keyframes q2 {
+            from {
+                background-color: white;
+            }
+            to {
+                background-color: red;
+            }
+        }
+
+        #q3 {
+            animation-name: q3;
+            animation-duration: 8s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+        }
+
+        @keyframes q3 {
+            0% {
+                margin-left: 0;
+                margin-top: 0;
+            }
+            25% {
+                margin-left: 300px;
+                margin-top: 0;
+            }
+            50% {
+                margin-left: 300px;
+                margin-top: 300px;
+            }
+            75% {
+                margin-left: 0;
+                margin-top: 300px;
+            }
+        }
+
+        #q4 {
+            animation-name: q3, q4;
+            animation-duration: 8s, 2s;
+            animation-timing-function: linear, linear;
+            animation-iteration-count: infinite, infinite;
+
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+        }
+
+        @keyframes q4 {
+            0% {
+                background-color: white;
+            }
+            50% {
+                background-color: red;
+            }
+        }
+
+        #q5 {
+            animation-name: q5;
+            animation-duration: 3s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+
+            width: 50px;
+            height: 50px;
+            border: 1px solid red;
+        }
+
+        @keyframes q5 {
+            from {
+                margin-left: 0;
+            }
+            to {
+                margin-left: 500px;
+            }
+        }
+
+        #q7 {
+            animation: q7 2s infinite alternate ease paused;
+
+            width: 100px;
+            height: 50px;
+            border: 1px solid red;
+        }
+
+        @keyframes q7 {
+            from {
+                width: 100px;
+            }
+            to {
+                width: 400px;
+            }
+        }
+
+        #q7:hover {
+            animation-play-state: running;
+        }
+
+        #q81 {
+            height: 50px;
+            width: 50px;
+            border: 1px solid green;
+            margin-bottom: 25px;
+        }
+
+        #q82 {
+            animation: q7 2s infinite alternate ease paused;
+
+            width: 100px;
+            height: 50px;
+            border: 1px solid red;
+        }
+
+        #q81:hover + #q82 {
+            animation-play-state: running;
+        }
+
+        #q91 {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        #q92 {
+            animation: q9 5s infinite;
+
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            border-radius: 50%;
+        }
+
+        @keyframes q9 {
+            0% {
+                bottom: calc(100% - 20px);
+                left: 0;
+                animation-timing-function: ease-in;
+            }
+            45% {
+                bottom: 0;
+                animation-timing-function: ease-out;
+            }
+            55% {
+                bottom: 40px;
+                left: 40px;
+                animation-timing-function: ease-in;
+            }
+            70% {
+                bottom: 0;
+                animation-timing-function: ease-out;
+            }
+            80% {
+                bottom: 20px;
+                left: 75px;
+                animation-timing-function: ease-in;
+            }
+            90% {
+                bottom: 0;
+                animation-timing-function: ease-out;
+            }
+            95% {
+                bottom: 10px;
+                left: 100px;
+                animation-timing-function: ease-in;
+            }
+            100% {
+                bottom: 0;
+                animation-timing-function: ease-out;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>№1</h2>
+<div id="q1"></div>
+<h2>№2</h2>
+<div id="q2"></div>
+<h2>№3</h2>
+<div id="q3"></div>
+<h2>№4</h2>
+<div id="q4"></div>
+<h2>№5</h2>
+<div id="q5"></div>
+<h2>№6</h2>
+<pre>
+    #elem {
+	    animation-name: anim;
+	    animation-duration: 4s;
+	    animation-delay: 5s;
+	    animation-timing-function: ease;
+    }
+        #elem {
+	    animation:anim 4s ease 5s;
+    }
+</pre>
+<h2>№7</h2>
+<div id="q7"></div>
+<h2>№8</h2>
+<div id="q81"></div>
+<div id="q82"></div>
+<h2>№9</h2>
+<div id="q91">
+    <div id="q92"></div>
+</div>
+</body>
+</html>
