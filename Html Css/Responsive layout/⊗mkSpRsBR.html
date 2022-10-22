@@ -1,0 +1,144 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>⊗mkSpRsBR</title>
+    <style>
+        .parent {
+            display: flex;
+            width: 90%;
+            margin: 50px auto;
+        }
+
+        .child {
+            box-sizing: border-box;
+            padding: 20px;
+            border: 1px solid green;
+        }
+
+        @media (min-width: 900px) {
+            .parent {
+                justify-content: space-between;
+            }
+
+            #q1 .child:nth-child(1) {
+                width: 69%;
+            }
+
+            #q1 .child:nth-child(2) {
+                width: 30%;
+            }
+
+            #q2 .child:nth-child(1) {
+                width: 59%;
+            }
+
+            #q2 .child:nth-child(2) {
+                width: 20%;
+            }
+
+            #q2 .child:nth-child(3) {
+                width: 20%;
+            }
+
+            #q3 .child:nth-child(1) {
+                width: 58%;
+            }
+
+            #q3 .child:nth-child(2) {
+                width: 20%;
+            }
+
+            #q3 .child:nth-child(3) {
+                width: 20%;
+            }
+
+            #q4 .child:nth-child(1) {
+                width: 20%;
+            }
+
+            #q4 .child:nth-child(2) {
+                width: 58%;
+            }
+
+            #q4 .child:nth-child(3) {
+                width: 20%;
+            }
+        }
+
+        @media (min-width: 500px) and (max-width: 900px) {
+            #q3, #q4 {
+                flex-wrap: wrap;
+            }
+
+            #q3 .child, #q4 .child {
+                margin-bottom: 10px;
+            }
+
+            #q3 .child:nth-child(1) {
+                width: 100%;
+            }
+
+            #q3 .child:nth-child(2) {
+                width: 49.25%;
+                margin-right: 1.5%;
+            }
+
+            #q3 .child:nth-child(3) {
+                width: 49.25%;
+            }
+
+            #q4 .child:nth-child(1) {
+                width: 49.25%;
+                margin-right: 1.5%;
+                order: 2;
+            }
+
+            #q4 .child:nth-child(2) {
+                width: 100%;
+                order: 1;
+            }
+
+            #q4 .child:nth-child(3) {
+                width: 49.25%;
+                order: 3;
+            }
+        }
+
+        @media (max-width: 500px) {
+            .parent {
+                flex-direction: column;
+            }
+
+            .child {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>№1</h2>
+<div class="parent" id="q1">
+    <div class="child">1</div>
+    <div class="child">2</div>
+</div>
+<h2>№2</h2>
+<div class="parent" id="q2">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+<h2>№3</h2>
+<div class="parent" id="q3">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+<h2>№4</h2>
+<div class="parent" id="q4">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+</div>
+</body>
+</html>

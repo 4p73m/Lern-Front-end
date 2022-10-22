@@ -1,0 +1,116 @@
+<!DOCTYPE html >
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>⊗mkSpRsFS</title>
+    <style>
+        .parent {
+            display: flex;
+            flex-wrap: wrap;
+            width: 95%;
+            margin: 50px auto;
+        }
+
+        .child {
+            box-sizing: border-box;
+            height: 100px;
+            padding: 20px;
+            border: 1px solid green;
+        }
+
+        #q1 .child {
+            margin-bottom: 0.75%;
+        }
+
+        #q2 .child {
+            margin-bottom: 20px;
+        }
+
+        @media (max-width: 700px) {
+            #q1 .child {
+                width: calc(100% / 2 - 0.75% * 1 / 2);
+            }
+
+            #q1 .child:not(:nth-child(2n)) {
+                margin-right: 0.75%;
+            }
+
+            #q2 .child {
+                width: calc(100% / 2 - 20px * 1 / 2);
+            }
+
+            #q2 .child:not(:nth-child(2n)) {
+                margin-right: 20px;
+            }
+        }
+
+        @media (min-width: 700px) and (max-width: 1000px) {
+            #q1 .child {
+                width: calc(100% / 4 - 0.75% * 3 / 4);
+            }
+
+            #q1 .child:not(:nth-child(4n)) {
+                margin-right: 0.75%;
+            }
+
+            #q2 .child {
+                width: calc(100% / 4 - 20px * 3 / 4);
+            }
+
+            #q2 .child:not(:nth-child(4n)) {
+                margin-right: 20px;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            #q1 .child {
+                width: calc(100% / 8 - 0.75% * 7 / 8);
+            }
+
+            #q1 .child:not(:nth-child(8n)) {
+                margin-right: 0.75%;
+            }
+
+            #q2 .child {
+                width: calc(100% / 8 - 20px * 7 / 8);
+            }
+
+            #q2 .child:not(:nth-child(8n)) {
+                margin-right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+<h2>№1</h2>
+<div class="parent" id="q1">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+    <div class="child">6</div>
+    <div class="child">7</div>
+    <div class="child">8</div>
+    <div class="child">9</div>
+    <div class="child">10</div>
+    <div class="child">11</div>
+    <div class="child">12</div>
+</div>
+<h2>№2</h2>
+<div class="parent" id="q2">
+    <div class="child">1</div>
+    <div class="child">2</div>
+    <div class="child">3</div>
+    <div class="child">4</div>
+    <div class="child">5</div>
+    <div class="child">6</div>
+    <div class="child">7</div>
+    <div class="child">8</div>
+    <div class="child">9</div>
+    <div class="child">10</div>
+    <div class="child">11</div>
+    <div class="child">12</div>
+</div>
+</body>
+</html>
