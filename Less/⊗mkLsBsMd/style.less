@@ -1,0 +1,41 @@
+.tablet(@code) {
+  @media (min-width: 600px) {
+    @code();
+  }
+}
+
+.gadget(@code) {
+  @media (min-width: 801px) {
+    @code();
+  }
+}
+
+.notebook(@code) {
+  @media (min-width: 1025px) {
+    @code();
+  }
+}
+
+.desktop(@code) {
+  @media (min-width: 1281px) {
+    @code();
+  }
+}
+
+div {
+  .tablet({
+    border: 1px solid black;
+  });
+
+  .gadget({
+    border: 1px solid black;
+  });
+
+  .notebook({
+    border: 1px solid red;
+  });
+
+  .desktop({
+    border: 1px solid green;
+  })
+}
